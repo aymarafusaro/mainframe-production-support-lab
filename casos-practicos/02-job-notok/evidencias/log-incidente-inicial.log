@@ -1,0 +1,36 @@
+============================================================
+SIMULACION EDUCATIVA - INCIDENTE MAINFRAME
+Caso 02: ACTUALIZA-SALDOS en ENDED NOTOK
+ODATE: 20261015
+============================================================
+
+JOB: ACTUALIZA-SALDOS
+STEP INICIALIZA - RC 0000
+STEP ACTUALIZA - RC 0012
+STEP CIERRE - NOT RUN
+NEXT JOB: GENERA-REPORTE - WAIT CONDITION
+
+ERROR: INVALID NUMERIC DATA
+PROGRAM: ACTSALDO
+FIELD: WS-SALDO
+RECORD: 00008427
+RETURN CODE: 0012
+
+REGISTRO RECIBIDO:
+CUENTA=0015739201
+IMPORTE=0000012500
+SALDO=00008A4500
+
+VALOR CONFIRMADO POR ORIGEN: 0000845000
+VALIDACION DE FORMATO EN INTERFAZ: NO REALIZADA
+
+DIAGNOSTICO SIMULADO:
+El campo SALDO contiene un caracter no numerico.
+La interfaz no validó el formato antes de entregar el archivo.
+
+ACCION:
+Escalar al equipo responsable y solicitar regeneracion.
+No corregir datos ni reejecutar sin autorizacion.
+
+NOTA: datos ficticios para practica.
+============================================================

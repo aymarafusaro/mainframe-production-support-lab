@@ -1,0 +1,19 @@
+============================================================
+SIMULACION EDUCATIVA - PLAN DE RECUPERACION
+Caso 02: ACTUALIZA-SALDOS
+============================================================
+
+1. Solicitar archivo regenerado desde el origen.
+2. Validar que SALDO contenga solo digitos.
+3. Comparar cantidad de registros y controles de integridad.
+4. Confirmar autorizacion del equipo responsable.
+5. Verificar que la reejecucion no duplique actualizaciones.
+6. Ejecutar conforme al procedimiento aprobado.
+7. Validar RC, registros procesados y conciliacion de saldos.
+8. Confirmar el estado de GENERA-REPORTE.
+
+ESTADO: PENDIENTE DE VALIDACION DE ARCHIVO Y RECUPERACION
+No se simula una ejecucion exitosa no verificada.
+
+NOTA: archivo educativo; datos ficticios.
+============================================================
