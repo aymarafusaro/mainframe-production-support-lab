@@ -1,0 +1,20 @@
+LABORATORIO DE SOPORTE MAINFRAME
+CASO 01 - SIMULACION DE CONTROL-M
+
+Fecha operativa (ODATE): 20261009
+Hora de consulta: 02:15
+
+JOB: LIQUIDA01
+ESTADO: WAIT CONDITION
+HORA PLANIFICADA: 02:00
+PREDECESOR ESPERADO: RECIBE01
+ARCHIVO ESPERADO: PAGOS.DIARIOS
+
+OBSERVACIONES:
+- El job LIQUIDA01 todavía no comenzó.
+- El estado del predecesor no está confirmado.
+- La recepción del archivo no está confirmada.
+- La condición de entrada pendiente todavía no fue identificada.
+- El impacto definitivo debe validarse con el equipo responsable.
+
+FIN DEL REGISTRO SIMULADO

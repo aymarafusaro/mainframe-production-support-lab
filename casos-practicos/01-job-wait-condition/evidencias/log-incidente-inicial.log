@@ -1,0 +1,36 @@
+============================================================
+SIMULACION EDUCATIVA - INCIDENTE MAINFRAME
+Caso 01: Job en WAIT CONDITION
+ODATE: 20261009
+============================================================
+
+[ALERTA] JOB: LIQUIDA01
+ESTADO: WAIT CONDITION
+DEPENDENCIA: RECIBE01
+ARCHIVO ESPERADO: PROD.PAGOS.ENTRADA.DIARIO
+
+[JOB] RECIBE01
+ESTADO FINAL: ENDED NOTOK
+
+[PASO] VALIDAR-ARCHIVO
+MENSAJE: DATASET NOT FOUND
+RETURN CODE: 0008
+
+[INVESTIGACION]
+Dataset recibido: PROD.PAGOS.ENTRADA.20261008
+Fecha operativa validada: 20261009
+Cantidad de registros: 12500
+Controles de recepcion: OK
+
+[DIAGNOSTICO INICIAL]
+El dataset recibido no coincide con el nombre fijo
+utilizado por el job de recepcion.
+Se requiere verificar JCL, parametros y dependencias
+antes de ejecutar acciones de recuperacion.
+
+[ESTADO]
+Incidente en investigacion.
+No realizar reejecuciones sin autorizacion.
+
+NOTA: todos los datos de este archivo son ficticios.
+============================================================
