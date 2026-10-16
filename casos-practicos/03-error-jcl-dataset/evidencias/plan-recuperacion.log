@@ -1,0 +1,19 @@
+============================================================
+SIMULACION EDUCATIVA - PLAN DE RECUPERACION
+Caso 03: EXTRAE-MOVIMIENTOS
+============================================================
+
+1. Confirmar ODATE 20261016.
+2. Validar el dataset correspondiente a esa fecha.
+3. Comparar el JCL desplegado con la version aprobada.
+4. Obtener autorizacion del equipo responsable.
+5. Corregir conforme a la configuracion aprobada.
+6. Ejecutar segun el procedimiento autorizado.
+7. Revisar spool, RC e integridad de la extraccion.
+8. Verificar el estado de ENVIA-REPORTES.
+
+ESTADO: PENDIENTE DE EJECUCION Y VALIDACION
+No se declara la recuperacion completa sin evidencias.
+
+NOTA: archivo educativo; datos ficticios.
+============================================================

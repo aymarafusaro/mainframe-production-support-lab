@@ -1,0 +1,37 @@
+============================================================
+SIMULACION EDUCATIVA - INCIDENTE MAINFRAME
+Caso 03: EXTRAE-MOVIMIENTOS
+ODATE: 20261016
+============================================================
+
+JOB STATUS: JCL ERROR
+DDNAME: ENTRADA
+DSN: PROD.MOVIMIENTOS.DIARIO
+DISP: SHR
+ERROR: DATA SET NOT FOUND
+
+CONSULTA DE CATALOGO:
+PROD.MOVIMIENTOS.DIARIO        NO CATALOGADO
+PROD.MOVIMIENTOS.DIARIO.20261016 CATALOGADO
+PROD.MOVIMIENTOS.DIARIO.20261015 CATALOGADO
+
+JCL EJECUTADO:
+DSN=PROD.MOVIMIENTOS.DIARIO
+
+JCL APROBADO:
+SET FECHA=20261016
+DSN=PROD.MOVIMIENTOS.DIARIO.&FECHA
+
+DIAGNOSTICO:
+El JCL ejecutado utiliza un nombre fijo y no coincide
+con la definicion aprobada que utiliza el parametro FECHA.
+
+ACCION:
+Validar ODATE, dataset y configuracion desplegada.
+Solicitar autorizacion antes de corregir y ejecutar.
+
+ESTADO: DIAGNOSTICO IDENTIFICADO
+RECUPERACION: PENDIENTE DE VALIDACION
+
+NOTA: datos ficticios para practica.
+============================================================
