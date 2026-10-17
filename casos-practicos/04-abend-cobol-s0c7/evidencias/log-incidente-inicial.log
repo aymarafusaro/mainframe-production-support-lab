@@ -1,0 +1,50 @@
+SIMULACION DE INCIDENTE MAINFRAME - DATOS FICTICIOS
+ODATE=20261017
+JOB=CALCULA-INTERESES
+STEP=CALCULAR
+PROGRAM=CALINT01
+JOB_STATUS=ABEND S0C7
+INPUT_RECORD=00003142
+DOWNSTREAM_JOB=GENERA-RESUMEN
+DOWNSTREAM_STATUS=WAITING
+
+MENSAJE DEL INCIDENTE
+El programa terminó anormalmente durante el cálculo de intereses.
+El job dependiente no puede continuar hasta que se resuelva el incidente.
+
+OPERACION INFORMADA
+COMPUTE WS-INTERES =
+    WS-SALDO * WS-TASA / 100
+
+REGISTRO DE ENTRADA INFORMADO
+CUENTA=00078421
+SALDO=000015A250
+TASA=0000350
+
+DEFINICIONES COBOL INFORMADAS
+01 WS-SALDO   PIC 9(8)V99 COMP-3.
+01 WS-TASA    PIC 9(3)V99 COMP-3.
+01 WS-INTERES PIC 9(9)V99 COMP-3.
+
+FLUJO DE PROGRAMA REVISADO
+READ ARCHIVO-ENTRADA
+    AT END
+        SET FIN-ARCHIVO TO TRUE
+    NOT AT END
+        MOVE ENTRADA-SALDO TO WS-SALDO
+        MOVE ENTRADA-TASA  TO WS-TASA
+        COMPUTE WS-INTERES =
+            WS-SALDO * WS-TASA / 100
+END-READ
+
+HALLAZGOS
+1. SALDO contiene el carácter A, aunque se esperaba un dato numérico.
+2. En el fragmento revisado no se observa una validación numérica explícita antes del cálculo.
+3. Debe comprobarse el layout completo, las posiciones y las definiciones del copybook.
+4. El formato informado para TASA ocupa 7 posiciones, mientras WS-TASA está definido como 5 dígitos numéricos (PIC 9(3)V99). Hay que verificar el mapeo antes de concluir el diagnóstico.
+
+DIAGNOSTICO PRELIMINAR
+El dato no numérico en SALDO es consistente con el ABEND S0C7.
+La causa raíz definitiva requiere confirmar el layout, la lectura y las conversiones del programa.
+
+No se afirma que la recuperación haya sido ejecutada.

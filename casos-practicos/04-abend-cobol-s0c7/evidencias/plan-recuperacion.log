@@ -1,0 +1,39 @@
+SIMULACION - CASO 04: ABEND S0C7
+ODATE=20261017
+JOB=CALCULA-INTERESES
+STEP=CALCULAR
+PROGRAM=CALINT01
+
+DIAGNOSTICO:
+El registro 00003142 contiene un carácter no numérico
+en el campo SALDO: 000015A250.
+El programa realiza el cálculo sin una validación
+numérica explícita visible en el fragmento analizado.
+
+PLAN DE RECUPERACION:
+
+1. Revisar spool, dump y registro que provocó el ABEND.
+2. Comparar el archivo con el layout y el copybook vigentes.
+3. Verificar también la definición y las posiciones del campo TASA.
+4. Solicitar al equipo de origen la regeneración del archivo
+   desde una fuente confiable.
+5. Validar campos numéricos, estructura, cantidad de registros
+   e integridad del archivo corregido.
+6. Verificar si hubo actualizaciones parciales y prevenir
+   duplicaciones antes de reejecutar.
+7. Obtener autorización operativa y ejecutar el procedimiento
+   de recuperación aprobado.
+8. Verificar RC final, registros procesados, saldos y conciliación.
+9. Liberar GENERA-RESUMEN únicamente cuando se cumplan
+   las dependencias y los controles requeridos.
+
+PREVENCION:
+- Incorporar validación numérica antes de los cálculos.
+- Registrar los rechazos con número de registro y motivo.
+- Agregar pruebas para datos alfanuméricos inválidos.
+- Mantener alineados el layout, el copybook y el programa.
+
+ESTADO:
+PLAN DOCUMENTADO.
+RECUPERACION EJECUTADA: NO CONFIRMADA.
+DATOS: FICTICIOS; CASO DE LABORATORIO.
