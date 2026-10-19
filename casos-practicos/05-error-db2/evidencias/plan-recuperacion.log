@@ -1,0 +1,31 @@
+SIMULACION - CASO 05 DB2 SQLCODE -911
+ODATE=20261017
+JOB=ACTUALIZA-CUENTAS
+PROGRAM=ACTCTA01
+
+DIAGNOSTICO:
+Deadlock entre ACTCTA01 y ACTCTA02.
+La transacción A fue seleccionada como víctima.
+DB2 informó rollback de la unidad de trabajo afectada.
+
+PLAN DE RECUPERACION:
+
+1. Revisar los mensajes de DB2 y confirmar los recursos involucrados.
+2. Verificar la unidad de trabajo revertida y las operaciones previamente confirmadas.
+3. Revisar con desarrollo el orden de acceso a las filas.
+4. Definir una corrección aprobada si se confirma el acceso en orden inverso.
+5. Obtener autorización operativa antes de reintentar.
+6. Confirmar que el reintento no duplique actualizaciones.
+7. Ejecutar únicamente el procedimiento aprobado.
+8. Validar SQLCODE, registros actualizados, saldos y consistencia.
+9. Liberar GENERA-RESUMEN solo cuando las dependencias y controles estén satisfechos.
+
+PREVENCION:
+- Mantener un orden de acceso consistente cuando corresponda.
+- Reducir la duración de las unidades de trabajo cuando sea viable.
+- Utilizar reintentos controlados y autorizados.
+
+ESTADO:
+PLAN DOCUMENTADO.
+RECUPERACION EJECUTADA: NO CONFIRMADA.
+DATOS: FICTICIOS; CASO DE LABORATORIO.
