@@ -1,0 +1,37 @@
+SIMULACION - CASO 06: ARCHIVO DE ENTRADA NO RECIBIDO
+ODATE=20261020
+PROCESS=RECEPCION-PAGOS
+JOB=PROCESA-PAGOS
+
+DIAGNOSTICO:
+La transferencia y la validación finalizaron correctamente.
+El paso CATALOGAR no se ejecutó.
+El dataset definitivo no está disponible y la condición
+ARCHIVO-PAGOS-RECIBIDO permanece sin establecer.
+
+PLAN DE RECUPERACION:
+
+1. Revisar el log completo de recepción e identificar
+   por qué no se ejecutó CATALOGAR.
+2. Confirmar la ubicación temporal del archivo.
+3. Validar fecha operativa, estructura, cantidad de registros
+   e integridad del archivo.
+4. Coordinar con el equipo responsable la corrección del paso.
+5. Confirmar que el dataset definitivo exista y contenga
+   el archivo correcto.
+6. Verificar la condición de Control-M.
+7. Liberar la condición solo mediante el procedimiento
+   autorizado y después de validar la recepción.
+8. Ejecutar PROCESA-PAGOS según el procedimiento operativo.
+9. Verificar el resultado y las dependencias de LIQUIDA-PAGOS.
+10. Confirmar que no existan duplicaciones ni datos incompletos.
+
+PREVENCION:
+- Alertar ante fallas de catalogación.
+- Verificar existencia e integridad antes de liberar condiciones.
+- Mantener trazabilidad de cada etapa de recepción.
+
+ESTADO:
+PLAN DOCUMENTADO.
+RECUPERACION EJECUTADA: NO CONFIRMADA.
+DATOS FICTICIOS; CASO DE LABORATORIO.
