@@ -26,12 +26,20 @@ Repositorio práctico para aprender diagnóstico y resolución de incidencias en
 
 ## Estructura del repositorio
 
-- `docs/`: procedimientos, checklist y catálogo de errores.
-- `casos-practicos/`: ejercicios de diagnóstico.
-- `simulaciones/logs/`: registros de ejecución ficticios para practicar.
-- `simulaciones/jcl/`: ejemplos de JCL.
-- `simulaciones/archivos/`: archivos de prueba.
-- `plantillas/`: modelos de tickets y reportes de guardia.
+* [`docs/`](docs/): checklist de incidentes, catálogo de errores y procedimiento de guardia.
+* [`casos-practicos/`](casos-practicos/): seis casos documentados con evidencias y planes de recuperación.
+
+  * [Caso 01 — Job WAIT CONDITION](casos-practicos/01-job-wait-condition/README.md)
+  * [Caso 02 — Job NOTOK](casos-practicos/02-job-notok/README.md)
+  * [Caso 03 — Error JCL y dataset](casos-practicos/03-error-jcl-dataset/README.md)
+  * [Caso 04 — ABEND COBOL S0C7](casos-practicos/04-abend-cobol-s0c7/README.md)
+  * [Caso 05 — Deadlock DB2](casos-practicos/05-error-db2/README.md)
+  * [Caso 06 — Archivo no recibido](casos-practicos/06-archivo-no-recibido/README.md)
+* [`simulaciones/logs/`](simulaciones/logs/): registros ficticios para practicar el análisis de ejecuciones.
+* [`simulaciones/jcl/`](simulaciones/jcl/): ejemplos didácticos de JCL.
+* [`simulaciones/archivos/`](simulaciones/archivos/): archivos de prueba con datos ficticios.
+* [`plantillas/`](plantillas/): modelos de tickets Jira y reportes de guardia.
+
 
 ## Metodología
 
